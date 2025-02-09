@@ -1,2 +1,2 @@
-# Pi-Hole-with-Unbound
-Simple install script for Pi-Hole and Unbound servers for new Linux install.
+# Pi-Hole, Unbound and Squid installation script for new Linux installations.
+A simple script to help install Pi-Hole, Unbound and Squid on any new Linux installations.
