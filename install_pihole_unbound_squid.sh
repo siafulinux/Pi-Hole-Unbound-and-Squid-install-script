@@ -3,7 +3,7 @@
 # Define variables
 TIMEZONE="America/New_York"
 PIHOLE_PASSWORD="OtyakOt6@"
-SERVER_IP="192.168.254.127"
+SERVER_IP="192.168.0.100"
 DOMAIN="siafunet.xyz"
 DOCKER_COMPOSE_FILE="docker-compose.yml"
 UNBOUND_CONF_DIR="unbound"
