@@ -12,6 +12,12 @@ SQUID_CACHE_DIR="squid-cache"
 PIHOLE_VOL_DIR="etc-pihole"
 DNSMASQ_VOL_DIR="etc-dnsmasq.d"
 
+# Check if docker-compose is installed
+if ! command -v docker-compose &>/dev/null; then
+    echo "Installing docker-compose..."
+    sudo apt update && sudo apt install -y docker-compose
+fi
+
 # Create necessary directories
 mkdir -p $UNBOUND_CONF_DIR $SQUID_CONF_DIR $SQUID_CACHE_DIR $PIHOLE_VOL_DIR $DNSMASQ_VOL_DIR
 
@@ -26,9 +32,10 @@ services:
       - TZ=$TIMEZONE
       - WEBPASSWORD=$PIHOLE_PASSWORD
       - VIRTUAL_HOST=$DOMAIN
-      - ServerIP=$SERVER_IP
+      - PIHOLE_DNS_=$SERVER_IP
       - DNS1=127.0.0.1#5335
       - DNS2=127.0.0.1#5335
+      - WEB_PORT=8080
     volumes:
       - ./$PIHOLE_VOL_DIR:/etc/pihole
       - ./$DNSMASQ_VOL_DIR:/etc/dnsmasq.d
@@ -109,11 +116,11 @@ http_access deny all
 EOL
 
 # Ensure proper ownership and permissions for Docker volumes
-sudo chown -R 1000:1000 $PIHOLE_VOL_DIR $DNSMASQ_VOL_DIR $SQUID_CACHE_DIR
+sudo chown -R 999:999 $PIHOLE_VOL_DIR $DNSMASQ_VOL_DIR
 
 # Start Docker containers
 docker-compose up -d
 
 # Output success message
 echo "Pi-hole, Unbound, and Squid proxy have been successfully set up."
-echo "Access Pi-hole via http://$SERVER_IP/admin with password '$PIHOLE_PASSWORD'."
+echo "Access Pi-hole via http://$SERVER_IP:8080/admin with password '$PIHOLE_PASSWORD'."
