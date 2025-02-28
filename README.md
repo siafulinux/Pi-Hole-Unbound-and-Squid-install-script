@@ -4,7 +4,7 @@ A simple script to help install Pi-Hole, Unbound and Squid on new Linux installa
 
     git clone https://github.com/siafulinux/Pi-Hole-Unbound-and-Squid-install-script.git
     
-### Make sure to edit the top section to reflect your specific settings...
+### Make sure to edit your settings...
 
     cd Pi-Hole-Unbound-and-Squid-install-script
     nano install_pihole_unbound_squid.sh
