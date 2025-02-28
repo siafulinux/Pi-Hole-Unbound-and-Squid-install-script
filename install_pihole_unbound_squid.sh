@@ -3,8 +3,8 @@
 # Define variables
 TIMEZONE="America/New_York"
 PIHOLE_PASSWORD="Password"
-SERVER_IP="192.168.0.100"
-DOMAIN="siafunet.xyz"
+SERVER_IP="192.168.0.*"
+DOMAIN="website.com"
 DOCKER_COMPOSE_FILE="docker-compose.yml"
 UNBOUND_CONF_DIR="unbound"
 SQUID_CONF_DIR="squid-conf"
