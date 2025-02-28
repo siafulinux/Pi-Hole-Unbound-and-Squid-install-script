@@ -22,3 +22,10 @@ A simple script to help install Pi-Hole, Unbound and Squid on new Linux installa
       - "53:53/udp"
       - "8080:80/tcp"
       - "443:443/tcp"
+
+### Run script
+
+    chmod +x install_pihole_unbound_squid.sh
+    ./install_pihole_unbound_squid.sh
+
+And that should be it.
