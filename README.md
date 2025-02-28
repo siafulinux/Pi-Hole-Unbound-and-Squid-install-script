@@ -8,15 +8,10 @@ A simple script to help install Pi-Hole, Unbound and Squid on new Linux installa
 
 ### Make sure to edit the top section to reflect your specific settings...
 
-    nano bashrc-calendar-events-from-Google
+    nano install_pihole_unbound_squid.sh
 
     # Define variables
     TIMEZONE="America/New_York"
     PIHOLE_PASSWORD="Password"
     SERVER_IP="192.168.0.*"
     DOMAIN="website.com"
-
-
-    ###
-    echo 'google_calendar.sh' >> ~/.bashrc 
-
