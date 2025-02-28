@@ -14,3 +14,11 @@ A simple script to help install Pi-Hole, Unbound and Squid on new Linux installa
     PIHOLE_PASSWORD="Password"
     SERVER_IP="192.168.0.*"
     DOMAIN="website.com"
+
+### Change your ports as needed...
+
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "8080:80/tcp"
+      - "443:443/tcp"
