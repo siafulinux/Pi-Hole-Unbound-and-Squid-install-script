@@ -26,6 +26,6 @@ A simple script to help install Pi-Hole, Unbound and Squid on new Linux installa
 ### Run script
 
     chmod +x install_pihole_unbound_squid.sh
-    ./install_pihole_unbound_squid.sh
+    sudo ./install_pihole_unbound_squid.sh
 
 And that should be it.
