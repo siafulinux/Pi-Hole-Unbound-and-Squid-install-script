@@ -2,10 +2,8 @@
 
 A simple script to help install Pi-Hole, Unbound and Squid on new Linux installations.
 
-
-    git clone https://github.com/siafulinux/bashrc-calendar-events-from-Google.git
+    git clone https://github.com/siafulinux/Pi-Hole-Unbound-and-Squid-install-script.git
     
-
 ### Make sure to edit the top section to reflect your specific settings...
 
     nano install_pihole_unbound_squid.sh
